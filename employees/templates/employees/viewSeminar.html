@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+{% include 'partials/_messages.html' %}
+
+
+	<div class="col-md-12">
+		<h5>LIST OF SEMINARS</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="{% url 'training' %}">ADD SEMINAR</a>
+			<table class="table table-sm">
+				<tr>
+					<th>Tittle</th>
+					<th>Date</th>
+					<th>address</th>
+					<th>Type</th>
+					<th>Conducted</th>
+					<th>Level</th>
+
+				</tr>
+				{%for viewTrain in viewTrains%}
+				<tr>
+
+						<td>{{viewTrain.title1}}</td>
+						<td>{{viewTrain.bdate |date:"F d, Y"}}</td>
+						<td>{{viewTrain.address}}</td>
+						<td>{{viewTrain.type}}</td>
+						<td>{{viewTrain.conducted}}</td>
+						<td>{{viewTrain.level}}</td>
+
+
+					</tr>
+				{%endfor%}
+
+
+
+
+
+			</table>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}

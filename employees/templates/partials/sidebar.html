@@ -1,0 +1,33 @@
+{% load static %}
+
+ <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+
+                <a>TRAININGS</a>
+
+          <a href="{% url 'vtraining' %}"
+           class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>SEMINARS</span>
+        </a>
+
+           <a href="{% url 'vworkshop' %}"
+           class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>WORKSHOPS</span>
+        </a>
+
+            <a href="{% url 'employee_list' %}"
+           class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>LIST</span>
+        </a>
+
+        </ul>
+      </div>
+ </div>
+
+
+
+    </nav>
+
+
+

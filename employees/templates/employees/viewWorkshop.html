@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+{% include 'partials/_messages.html' %}
+	<div class="col-md-12">
+		<h5>LIST OF WORKSHOPS</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="{% url 'workshop' %}">ADD WORKSHOP</a>
+			<table class="table table-sm">
+				<tr>
+					<th>Tittle</th>
+					<th>Date</th>
+					<th>Address</th>
+					<th>Type</th>
+					<th>Conducted</th>
+					<th>Level</th>
+
+				</tr>
+				{% for viewWorkshop in viewWorkshop %}
+				<tr>
+
+						<td>{{viewWorkshop.title1}}</td>
+						<td>{{viewWorkshop.bdate |date:"F d, Y"}}</td>
+						<td>{{viewWorkshop.address}}</td>
+						<td>{{viewWorkshop.type}}</td>
+						<td>{{viewWorkshop.conducted}}</td>
+						<td>{{viewWorkshop.level}}</td>
+
+
+					</tr>
+				{%endfor%}
+
+			</table>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}

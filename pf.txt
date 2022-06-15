@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="POST">
+    {%csrf_token%}
+    <div>
+        <input type="text" name="title1" placeholder="training title"/>
+    </div>
+    <button type="submit">Add Training</button>
+</form>
+
+</body>
+</html>
+
+
+
+
+   <div class="city-item">
+            <input type="text" name="name" placeholder="City" />
+            <input type="text" name="name" placeholder="Region" />
+            <input type="text" name="name" placeholder="Postal / Zip code" />
+            <select>
+              <option value="">Country</option>
+              <option value="1">Russia</option>
+              <option value="2">Germany</option>
+              <option value="3">France</option>
+              <option value="4">Armenia</option>
+              <option value="5">USA</option>
+            </select>
+          </div>
+
+
+
+
+
+
+
+    sidebar
+nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+
+                <a>TRAININGS</a>
+
+          <a href="{% url 'vtraining' %}"
+           class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>SEMINARS</span>
+        </a>
+
+           <a href="{% url 'vworkshop' %}"
+           class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>WORKSHOPS</span>
+        </a>
+
+             <a href="{% url 'vskill' %}"
+           class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>SKILLS</span>
+        </a>
+        </ul>
+      </div>
+ </div>
+
+
+
+    </nav>
+
+
+          {% load static %}
+
+ <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+
+                <a>TRAININGS</a>
+
+          <a href="{% url 'vtraining' %}"
+           class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>SEMINARS</span>
+        </a>
+
+           <a href="{% url 'vworkshop' %}"
+           class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>WORKSHOPS</span>
+        </a>
+
+             <a href="{% url 'vskill' %}"
+           class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>SKILLS</span>
+        </a>
+        </ul>
+      </div>
+ </div>
+
+
+
+    </nav>
+
+
+
+
+
+
+
+    ///////
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+
+ <div class="position-sticky">
+      <div class="list-group list-group-flush mx-3 mt-4">
+
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                   class="dropdown-toggle list-group-item list-group-item-action py-2 ripple">TRAININGS</a>
+                <ul class="collapse list-unstyled fas fa-lock fa-fw me-3" id="pageSubmenu">
+
+                    <li>
+                        <a href="{% url  'vtraining' %}"
+                        class="list-group-item list-group-item-action py-2 ripple">
+                        <i class="fas fa-lock fa-fw me-3"></i><span>Seminar</span></a>
+                    </li>
+                      <li>
+                        <a href="{% url  'vskill' %}"
+                        class="list-group-item list-group-item-action py-2 ripple">
+                        <i class="fas fa-lock fa-fw me-3"></i><span>Skill</span></a>
+                    </li>
+
+                </ul>
+
+             <a href="{% url 'vtraining' %}"
+           class="list-group-item list-group-item-action py-2 ripple">
+          <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Training</span>
+        </a>
+      </div>
+ </div>
+
