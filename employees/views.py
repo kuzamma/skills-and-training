@@ -52,6 +52,24 @@ def viewWorkshop(request):
     viewWorkshop = workshops.objects.all()
     return render(request, 'employees/viewWorkshop.html', {'viewWorkshop': viewWorkshop})
 
+def edit_wokshop(request):
+    viewWorkshop =workshops.objects.get(id=pid)
+    if request.method == "POST":
+        title1 = request.POST['title1']
+        bdate = request.POST['bdate']
+        address = request.POST['address']
+        type = request.POST['type']
+        conducted = request.POST['conducted']
+        level = request.POST['level']
+        saveWorkshops = workshops(title1=title1, bdate=bdate, type=type, address=address, conducted=conducted,
+                                  level=level)
+        messages.success(request, "workshops Updated successfully")
+        return redirect('viewWorkshop')
+    return render(request, 'employees/viewWorkshop.html', {'viewWorkshop': viewWorkshop})
+
+
+
+
 
 def createEmployeee(request):
     if request.method == "POST":
